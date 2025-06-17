@@ -54,10 +54,10 @@ export default function TransactionRow({ transaction, refetch }) {
          <p className='text-sm text-gray-700'>
             <strong>Method:</strong> {transaction.method}
          </p>
-         {/* <p className='text-sm text-gray-700'>
+         <p className='text-sm text-gray-700'>
             <strong>Address:</strong>{' '}
             {selectedUser[`${transaction.method}Deposit`] || 'N/A'}
-         </p> */}
+         </p>
          <p className='text-sm text-gray-700'>
             <strong>User ID:</strong> {transaction.userId}
          </p>

@@ -147,15 +147,15 @@ const confirmTransaction = async (
     const referrerId = userDoc.referredBy;
     if (referrerId) {
       try {
-        const bonus = 0.05 * depositAmount;
+        const bonus = 0.1 * depositAmount;
         const referrer = await db.getDocument(collectionsId.USERS, referrerId);
 
         if (referrer) {
-          const updatedRefEarnings = Number(referrer.earnings || 0) + bonus;
+          const updatedRefEarnings = Number(referrer.referralBonus || 0) + bonus;
           const updatedRefBalance = Number(referrer.balance || 0) + bonus;
 
           await db.updateDocument(collectionsId.USERS, referrerId, {
-            earnings: updatedRefEarnings,
+          referralBonus: updatedRefEarnings,
             balance: updatedRefBalance,
           });
         }
