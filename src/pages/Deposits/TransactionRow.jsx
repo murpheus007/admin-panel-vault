@@ -7,6 +7,15 @@ export default function TransactionRow({ transaction, refetch }) {
    const [modalOpen, setModalOpen] = useState(false);
    const [selectedUser, setSelectedUser] = useState(null);
 
+    const selectUser = users.find((u) => u.$id === transaction.userId);
+   const depositFieldMap = {
+      ethereum: 'ethereumDeposit',
+      bitcoin: 'bitcoinDeposit',
+      bank: 'bankAccount',
+      usdt: 'usdtWallet',
+      // Add more if needed
+   };
+
    const handleOpenModal = () => {
       const user = users.find((u) => u.$id === transaction.userId);
       if (user) {
@@ -56,8 +65,9 @@ export default function TransactionRow({ transaction, refetch }) {
          </p>
          <p className='text-sm text-gray-700'>
             <strong>Address:</strong>{' '}
-            {selectedUser[`${transaction.method}Deposit`] || 'N/A'}
+            {selectUser?.[depositFieldMap[transaction.method]] || 'N/A'}
          </p>
+
          <p className='text-sm text-gray-700'>
             <strong>User ID:</strong> {transaction.userId}
          </p>
