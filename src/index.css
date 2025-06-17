@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Roboto condensed', sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* p, button {
+  font-size: 14px;
+  font-weight: 500;
+} */
+
+
+:root {
+  --color-primary: #015fc9;
+  --color-primary-hover: #a7c4e8;
+  --color-primary-text: #d8e3ef;
+
+
+  --color-secondary: #0dd3d1;
+  --color-secondary-hover: #0ab6b4;
+
+  --color-background: #f9fafb;
+  --color-surface: #ffffff;
+  
+  --color-text-main: #16083b;
+  --color-text-muted: #6b7280; /* for small, muted text */
+  --color-border: #e5e7eb; /* light border */
+
+  /* Status Colors */
+  --color-success: #10b981; /* green for success */
+  --color-error: #ef4444; /* red for errors */
+  --color-warning: #f59e0b; /* yellow for warning */
+
+  --color-deposit: #22C55E;
+  --color-withdraw: #EF4444;
+  --color-invest: #6366F1;
+}
+
+/* Text Sizes */
+
+.text-heading-1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.text-heading-2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.text-heading-3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.text-3xl {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+.text-large {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.text-regular {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.text-caption {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.text-label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* You can add more as needed */
+
+.button_global {
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.button-primary:hover {
+    box-shadow: 0 0 32px 4px rgba(136, 148, 189, 0.25);
+}
+.button-secondary {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+.button-secondary:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.flex {
+  display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  background-color: #015fc9;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
